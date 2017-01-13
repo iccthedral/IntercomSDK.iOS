@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\..\..\..\..\Projects\rs.cicadas.intercom\packages\NuGet.Build.Packaging.0.1.157-dev\build\NuGet.Build.Packaging.props" Condition="Exists('..\..\..\..\..\Projects\rs.cicadas.intercom\packages\NuGet.Build.Packaging.0.1.157-dev\build\NuGet.Build.Packaging.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4604FD8B-0B36-406C-BEB0-E31D65542380}</ProjectGuid>
+    <ProjectTypeGuids>{8FFB629D-F513-41CE-95D2-7ECE97B6EEEC};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>IntercomBinding_iOS</RootNamespace>
+    <AssemblyName>IntercomBinding_iOS</AssemblyName>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <PackOnBuild>true</PackOnBuild>
+    <PackageId>IntercomSDK.iOS</PackageId>
+    <PackageVersion>3.0.22</PackageVersion>
+    <Authors>nullpotent</Authors>
+    <Description>Intercom SDK bindings for iOS</Description>
+    <Owners>nullpotent</Owners>
+    <PackageReleaseNotes>v3.0.22</PackageReleaseNotes>
+    <Summary>Intercom SDK for iOS</Summary>
+    <PackageTags>intercom xamarin ios xamarin.ios</PackageTags>
+    <Title>IntercomSDK.iOS</Title>
+    <PackageIconUrl>https://raw.githubusercontent.com/iccthedral/IntercomSDK.iOS/master/Intercom_blue_symbol.png</PackageIconUrl>
+    <PackageLicenseUrl>https://raw.githubusercontent.com/iccthedral/IntercomSDK.iOS/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/iccthedral/IntercomSDK.iOS</PackageProjectUrl>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <DefineConstants></DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="Xamarin.iOS" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ObjcBindingApiDefinition Include="ApiDefinition.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ObjcBindingCoreSource Include="Structs.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <NativeReference Include="Intercom.framework">
+      <Kind>Framework</Kind>
+      <SmartLink>False</SmartLink>
+    </NativeReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.ObjCBinding.CSharp.targets" />
+  <Import Project="..\..\..\..\..\Projects\rs.cicadas.intercom\packages\NuGet.Build.Packaging.0.1.157-dev\build\NuGet.Build.Packaging.targets" Condition="Exists('..\..\..\..\..\Projects\rs.cicadas.intercom\packages\NuGet.Build.Packaging.0.1.157-dev\build\NuGet.Build.Packaging.targets')" />
+</Project>
