@@ -1,24 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
-    <id>IntercomSDK.iOS</id>
-    <version>3.0.22</version>
-    <title>IntercomSDK.iOS</title>
-    <authors>nullpotent</authors>
-    <owners>nullpotent</owners>
+    <id>Everwealth.IntercomSDK.iOS</id>
+    <version>4.1.9</version>
+    <title>Everwealth.IntercomSDK.iOS</title>
+    <authors>Everwealth</authors>
+    <owners>Everwealth</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <licenseUrl>https://raw.githubusercontent.com/iccthedral/IntercomSDK.iOS/master/LICENSE</licenseUrl>
-    <projectUrl>https://github.com/iccthedral/IntercomSDK.iOS</projectUrl>
-    <iconUrl>https://raw.githubusercontent.com/iccthedral/IntercomSDK.iOS/master/Intercom_blue_symbol.png</iconUrl>
+    <licenseUrl>https://raw.githubusercontent.com/Everwealth/IntercomSDK.iOS/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/Everwealth/IntercomSDK.iOS</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/Everwealth/IntercomSDK.iOS/master/Intercom_blue_symbol.png</iconUrl>
     <description>Intercom SDK bindings for iOS</description>
     <summary>Intercom SDK for iOS</summary>
-    <releaseNotes>v3.0.22</releaseNotes>
     <copyright></copyright>
     <language></language>
     <tags>intercom xamarin ios xamarin.ios</tags>
-    <frameworkAssemblies>
-      <frameworkAssembly assemblyName="System" targetFramework="Xamarin.iOS1.0" />
-      <frameworkAssembly assemblyName="Xamarin.iOS" targetFramework="Xamarin.iOS1.0" />
-    </frameworkAssemblies>
   </metadata>
+  <files>
+    <file src="bin\release\IntercomBinding_iOS.dll" target="lib\xamarinios10" />
+  </files>
 </package>
