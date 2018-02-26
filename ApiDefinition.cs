@@ -80,7 +80,8 @@ namespace IntercomSDK
         [Export("presentConversationList")]
         void PresentConversationList();
 
-        // + (void) presentHelpCenter;
+        // +(void)presentHelpCenter;
+        [Static]
         [Export("presentHelpCenter")]
         void PresentHelpCenter();
 
@@ -89,12 +90,12 @@ namespace IntercomSDK
         [Export("setDeviceToken:")]
         void SetDeviceToken(NSData deviceToken);
 
-        // + (BOOL) isIntercomPushNotification:(NSDictionary*) userInfo;
+        // +(BOOL)isIntercomPushNotification:(NSDictionary*) userInfo;
         [Static]
         [Export("isIntercomPushNotification:")]
         bool IsIntercomPushNotification(NSDictionary userInfo);
 
-        // + (void)handleIntercomPushNotification:(NSDictionary *)userInfo;
+        // +(void)handleIntercomPushNotification:(NSDictionary *)userInfo;
         [Static]
         [Export("handleIntercomPushNotification:")]
         void HandleIntercomPushNotification(NSDictionary userInfo);
